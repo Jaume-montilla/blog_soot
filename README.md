@@ -7,7 +7,6 @@ Este proyecto es un **blog dinámico** creado utilizando **JavaScript** en el fr
 - **Frontend**: JavaScript, HTML, CSS
 - **Backend**: PHP
 - **Base de datos**: MySQL
-- **Servidor web**: Apache (o cualquier servidor compatible con PHP)
 
 ## Características
 
