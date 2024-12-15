@@ -2,7 +2,7 @@
 function connectDel($what, $id, $cookie)
 {
     // Conexión PDO
-    $pdo = new PDO("mysql:host=localhost;dbname=blog", 'jaume', 'jaume123');
+    $pdo = new PDO("mysql:host=localhost;dbname=dbanem", 'user', 'pwd');
     $pdo->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, false);
     
     // Función para verificar acceso del usuario
