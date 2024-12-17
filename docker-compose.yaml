@@ -6,7 +6,7 @@ services:
       MYSQL_USER: testing
       MYSQL_PASSWORD: AlbedoScope123
       MYSQL_DB: blog
-      MYSQL_PORT: 3306
+      #MYSQL_PORT: 3307
     ports:
       - "8080:80"
   web:
@@ -15,12 +15,12 @@ services:
       - "5173:5173"
   db:
     image: mysql:latest
-    volumes:
-      - ./sql/backup/blog_backup.sql:/docker-entrypoint-initdb.d/blog.sql
     environment:
-      MYSQL_ROOT_PASSWORD: RootJaumePC1.
+      MYSQL_ROOT_PASSWORD: superDuperSecurePasswd
       MYSQL_DATABASE: blog
       MYSQL_USER: testing
       MYSQL_PASSWORD: AlbedoScope123
     ports:
-      - "3306:3306"
+      - "3307:3306"
+    volumes:
+      - ./sql/blog_backup.sql:/var/lib/mysqld
