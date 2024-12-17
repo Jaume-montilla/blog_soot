@@ -2,7 +2,12 @@
 function connectDel($what, $id, $cookie)
 {
     // Conexión PDO
-    $pdo = new PDO("mysql:host=localhost;dbname=dbanem", 'user', 'pwd');
+    $host = $_ENV["MYSQL_HOST"];
+    $user = $_ENV["MYSQL_USER"];
+    $pwd = $_ENV["MYSQL_PASSWORD"];
+    $db = $_ENV["MYSQL_DB"];
+    $port = $_ENV["MYSQL_PORT"];
+    $pdo = new PDO("mysql:host=".$host.";port=".$port." dbname=".$db, $user, $pwd);
     $pdo->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, false);
     
     // Función para verificar acceso del usuario
@@ -72,7 +77,7 @@ function connectDel($what, $id, $cookie)
         }
 
         // Eliminar comentarios asociados al artículo
-        $stmt = $pdo->prepare("DELETE FROM COMMENTS WHERE ID IN (SELECT IDComment FROM COMMENTSARTICLES WHERE IDArticle = :id)");
+        $stmt = $pdo->prepare("DELETE FROM COMMENTS WHERE ID IN(SELECT IDComment FROM COMMENTSARTICLES WHERE IDArticle = :id)");
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
 
@@ -136,21 +141,21 @@ function connectDel($what, $id, $cookie)
 
     // Determinar acción según el tipo
     switch ($what) {
-        case 'COMMENTS':
-            delComments($pdo, $id, $cookie);
-            break;
-        case 'ARTICLES':
-            delArticles($pdo, $id, $cookie);
-            break;
-        case 'USERS':
-            delUsers($pdo, $id, $cookie);
-            break;
-        case 'REMOVEFAV':
-            removeFav($pdo, $id, $cookie);
-            break;
-        default:
-            echo json_encode(['success' => false, 'message' => 'Opción no disponible']);
-            break;
+    case 'COMMENTS':
+        delComments($pdo, $id, $cookie);
+        break;
+    case 'ARTICLES':
+        delArticles($pdo, $id, $cookie);
+        break;
+    case 'USERS':
+        delUsers($pdo, $id, $cookie);
+        break;
+    case 'REMOVEFAV':
+        removeFav($pdo, $id, $cookie);
+        break;
+    default:
+        echo json_encode(['success' => false, 'message' => 'Opción no disponible']);
+        break;
     }
 }
 ?>

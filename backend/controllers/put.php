@@ -1,7 +1,12 @@
 <?php
 function connectPut($allData)
 {
-    $pdo = new PDO("mysql:host=localhost;dbname=dbanem", 'user', 'pwd');
+    $host = $_ENV["MYSQL_HOST"];
+    $user = $_ENV["MYSQL_USER"];
+    $pwd = $_ENV["MYSQL_PASSWORD"];
+    $db = $_ENV["MYSQL_DB"];
+    $port = $_ENV["MYSQL_PORT"];
+    $pdo = new PDO("mysql:host=".$host.";port=".$port." dbname=".$db, $user, $pwd);
     $pdo->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, false);
     function sanear_datos($allData)
     {
