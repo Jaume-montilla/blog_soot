@@ -16,9 +16,11 @@ services:
   db:
     image: mysql:latest
     volumes:
-      - "./sql/backup:/docker-entrypoint-initdb.d"
+      - ./sql/backup/blog_backup.sql:/docker-entrypoint-initdb.d/blog.sql
     environment:
       MYSQL_ROOT_PASSWORD: RootJaumePC1.
       MYSQL_DATABASE: blog
+      MYSQL_USER: testing
+      MYSQL_PASSWORD: AlbedoScope123
     ports:
-      - "3308:3306"
+      - "3306:3306"
