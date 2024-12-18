@@ -17,6 +17,7 @@
 
 CREATE DATABASE IF NOT EXISTS blog;
 USE blog;
+
 --
 -- Table structure for table `ARTICLES`
 --
