@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="/../../img/s_transparent.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Sign Up</title>
+	<script src="script.js" defer></script>
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<header>
+	<ul class="nav-bar">
+		<li class="logo-item">
+			<a href="../../index.html"><img src="../../img/s_transparent.svg" alt="Logo" class="nav-icon" /></a>
+		</li>
+		<div class="nav-elements nolog">
+			<li class="nav-link"><a href="../autenticador/index.html">Log in</a></li>
+			<li class="nav-link"><a href="../autenticador/index.html">Sign up</a></li>
+		</div>
+		<div class="nav-elements log">
+			<li class="nav-link"><a href="../user/index.html">Favorites</a></li>
+			<li class="nav-link"><a href="" class="logOut">Log out</a></li>
+		</div>
+		<div class="nav-elements admin">
+			<li class="nav-link"><a href="../admin/adminView.html">Admin Page</a></li>
+			<li class="nav-link"><a href="../user/index.html">Favorites</a></li>
+			<li class="nav-link"><a href="" class="logOut">Log out</a></li>
+		</div>
+	</ul>
+</header>
+
+<body>
+	<div class="styleDIV">
+		<h3 id="hSignUp">Sign Up</h3>
+		<form action="" id="formSignUp">
+			<input type="text" name="firstName" class="inputsForm" placeholder="First Name" id="firstName" required />
+			<input type="text" name="lastName" class="inputsForm" placeholder="Last Name" id="lastName" required />
+			<input type="email" name="email" class="inputsForm" placeholder="Your Email" id="email" required />
+			<input type="password" name="password" class="inputsForm" placeholder="Password" id="password" required />
+			<input type="number" name="age" class="inputsForm" placeholder="Your Age" id="age" required />
+		</form>
+		<div id="divBtn">
+			<button id="sendUsr">Sign Up</button>
+		</div>
+		<p id="accountExists">
+			Already have an account? <a href="../autenticador/index.html" id="styleSP">Log In</a>
+		</p>
+	</div>
+	<footer>
+		<div class="footer-container">
+			<div class="footer-section">
+				<h4>Sobre Nosotros</h4>
+				<p>
+					Somos una empresa dedicada al desarrollo de páginas web y soluciones
+					tecnológicas.
+				</p>
+			</div>
+			<div class="footer-section">
+				<h4>Enlaces Útiles</h4>
+				<ul>
+					<li><a href="#home">Inicio</a></li>
+					<li><a href="#about">Acerca</a></li>
+					<li><a href="#services">Servicios</a></li>
+					<li><a href="#contact">Contacto</a></li>
+				</ul>
+			</div>
+			<div class="footer-section">
+				<h4>Contáctanos</h4>
+				<p>Email: contacto@empresa.com</p>
+				<p>Teléfono: +34 123 456 789</p>
+				<p>Dirección: Calle Falsa 123, Madrid</p>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<p>&copy; 2024 SOOT | Todos los derechos reservados.</p>
+		</div>
+	</footer>
+</body>
+
+</html>
