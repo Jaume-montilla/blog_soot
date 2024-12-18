@@ -21,6 +21,7 @@ Este proyecto es un **blog dinámico** creado utilizando **JavaScript** en el fr
 
 - MySQL o MariaDB para la base de datos.
 - PHP.
+- docker o podman
 
 ### Pasos para instalar
 
@@ -40,4 +41,20 @@ Este proyecto es un **blog dinámico** creado utilizando **JavaScript** en el fr
      mysql -u tu_usuario -p nombre_base_de_datos < sql/blog_backup.sql
      ```
 
-   
+   ### Pasos para instalar mediante Docker
+
+1. **Clona el repositorio**:
+
+   ```bash
+   git clone https://github.com/tu-usuario/blog.git
+   cd blog
+   ```
+   ### Inicializar Docker-compose
+   Para iniciar:
+      ```bash
+     docker-compose up 
+     ```
+   Para detenerlo
+   ```bash
+     docker-compose down
+     ```
