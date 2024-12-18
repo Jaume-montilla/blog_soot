@@ -23,7 +23,7 @@ services:
   database:
     image: mysql:5.7
     environment:
-      MYSQL_ROOT_PASSWORD: RootJaumePC1.
+      MYSQL_ROOT_PASSWORD: SuperDuperSecretPassword
       MYSQL_DATABASE: blog
       MYSQL_USER: blog
       MYSQL_PASSWORD: AlbedoScope123
