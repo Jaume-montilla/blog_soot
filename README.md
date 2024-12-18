@@ -1,60 +1,76 @@
 # Blog con JavaScript, PHP y MySQL
 
-Este proyecto es un **blog dinámico** creado utilizando **JavaScript** en el frontend y **PHP** en el backend, con una base de datos **MySQL** para almacenar los datos de las publicaciones. El objetivo de este proyecto es demostrar cómo integrar tecnologías de frontend y backend para crear una aplicación web funcional.
+Este proyecto es un **blog dinámico** que utiliza **JavaScript** en el frontend, **PHP** en el backend, y **MySQL** como base de datos para almacenar los datos de las publicaciones. El objetivo es demostrar cómo integrar tecnologías de frontend y backend para crear una aplicación web funcional.
 
 ## Tecnologías utilizadas
 
-- **Frontend**: JavaScript, HTML, CSS
-- **Backend**: PHP
-- **Base de datos**: MySQL
+- **Frontend**: JavaScript, HTML, CSS.
+- **Backend**: PHP.
+- **Base de datos**: MySQL.
+- **Contenedores**: Podman.
 
 ## Características
 
-- Creación, lectura, actualización y eliminación de publicaciones (CRUD).
-- Sistema de autenticación de usuarios.
-- Interfaz de usuario sencilla y funcional.
-- Base de datos relacional para almacenar publicaciones y usuarios.
+- **Autenticación de usuarios**: Los usuarios pueden registrarse e iniciar sesión para gestionar sus publicaciones.
+- **Interfaz de usuario**: Diseño simple, intuitivo y funcional.
+- **Base de datos relacional**: Uso de MySQL para gestionar publicaciones y usuarios.
 
 ## Instalación
 
 ### Requisitos
 
-- MySQL o MariaDB para la base de datos.
-- PHP.
-- docker o podman
+Antes de comenzar con la instalación, asegúrate de tener instalados los siguientes componentes en tu máquina:
 
-### Pasos para instalar
+- **Base de datos**: MySQL o MariaDB.
+- **Backend**: PHP.
+- **Gestión de contenedores**: Docker o Podman (opcional, si prefieres usar contenedores).
 
-1. **Clona el repositorio**:
+### Pasos de instalación manual
 
-   ```bash
-   git clone https://github.com/tu-usuario/blog.git
-   cd blog
-   npm install
-   npm run dev
-   cd backend
-   php -s localhost:8080
-   ```
-   ### DB
-   Para importar la base de datos usa el siguiente commando cambiando su usuario
-      ```bash
-     mysql -u tu_usuario -p nombre_base_de_datos < sql/blog_backup.sql
-     ```
+Si prefieres instalar el proyecto de manera manual, sigue los pasos a continuación:
 
-   ### Pasos para instalar mediante Docker
-
-1. **Clona el repositorio**:
-
-   ```bash
+1. Clona el repositorio en tu máquina.
+     ```bash
    git clone https://github.com/tu-usuario/blog.git
    cd blog
    ```
-   ### Inicializar Docker-compose
-   Para iniciar:
-      ```bash
-     docker-compose up 
-     ```
-   Para detenerlo
+2. Instala las dependencias del frontend y levanta el servidor usando npm.
    ```bash
-     docker-compose down
-     ```
+      npm install
+      npm run dev
+   ```
+3. Configura el backend ejecutando el servidor PHP en el puerto adecuado.
+   ```bash
+      npm install
+      npm run dev
+   ```
+4. Importa la base de datos MySQL usando el archivo `blog_backup.sql`.
+   ```bash
+      npm install
+      npm run dev
+   ```
+### Instalación con Docker (Recomendado)
+
+Si prefieres usar Docker para gestionar los contenedores, sigue estos pasos:
+
+1. Clona el repositorio en tu máquina.
+   ```bash
+   git clone https://github.com/tu-usuario/blog.git
+   cd blog
+   ```
+2. Configura y levanta los servicios con Docker Compose para iniciar los contenedores de frontend, backend y base de datos.
+      ```bash
+      npm install
+      npm run dev
+   ```
+3. accede al fichero Docker-compose.yaml y modifica los valores  'MYSQL_ROOT_PASSWORD' por la contraseña de su MySQL.
+    
+4. Inicia los servicios.
+      ```bash
+     docker-compose up --build
+
+   ```
+5. Detén los servicios.
+    ```bash
+   docker-compose down
+   ```
