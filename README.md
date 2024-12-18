@@ -39,15 +39,14 @@ Si prefieres instalar el proyecto de manera manual, sigue los pasos a continuaci
       npm install
       npm run dev
    ```
-3. Configura el backend ejecutando el servidor PHP en el puerto adecuado.
+3. Configura el backend ejecutando el servidor PHP en el puerto 8080.
    ```bash
-      npm install
-      npm run dev
+     cd backend
+     php -s localhost:8080
    ```
 4. Importa la base de datos MySQL usando el archivo `blog_backup.sql`.
    ```bash
-      npm install
-      npm run dev
+     mysql -u tu_usuario -p nombre_base_de_datos < init.sql
    ```
 ### Instalación con Docker (Recomendado)
 
