@@ -42,7 +42,7 @@ Si prefieres instalar el proyecto de manera manual, sigue los pasos a continuaci
 3. Configura el backend ejecutando el servidor PHP en el puerto 8080.
    ```bash
      cd backend
-     php -s localhost:8080
+     php -S localhost:8080
    ```
 4. Importa la base de datos MySQL usando el archivo `blog_backup.sql`.
    ```bash
