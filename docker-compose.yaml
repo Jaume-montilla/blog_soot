@@ -6,21 +6,34 @@ services:
       MYSQL_USER: testing
       MYSQL_PASSWORD: AlbedoScope123
       MYSQL_DB: blog
-      #MYSQL_PORT: 3307
     ports:
       - "8080:80"
-  web:
+    depends_on:
+      - db
+    networks:
+      - blog_network
+
+  frontend:
     build: .
     ports:
       - "5173:5173"
-  db:
-    image: mysql:latest
+    networks:
+      - blog_network
+  
+  database:
+    image: mysql:5.7
     environment:
-      MYSQL_ROOT_PASSWORD: superDuperSecurePasswd
+      MYSQL_ROOT_PASSWORD: RootJaumePC1.
       MYSQL_DATABASE: blog
-      MYSQL_USER: testing
+      MYSQL_USER: blog
       MYSQL_PASSWORD: AlbedoScope123
     ports:
       - "3307:3306"
+    networks:
+      - blog_network
     volumes:
-      - ./sql/blog_backup.sql:/var/lib/mysqld
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+networks:
+  blog_network:
+    driver: bridge
