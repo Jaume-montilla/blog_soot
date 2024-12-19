@@ -62,26 +62,35 @@ Este proyecto es un blog dinámico que combina **JavaScript, PHP y MySQL** para 
 ### Frontend
 El frontend está estructurado para gestionar las distintas vistas de manera ordenada:
 
-- **Administrador**: Funciones relacionadas con usuarios y publicaciones.
+- **Vista general**: Permite una vista previa de los artículos y las reviews.
 - **Artículos**: Secciones para listar y detallar los posts.
+- **Administrador**: Funciones relacionadas con usuarios y publicaciones.
+- **Usuarios**: Permite manejar los comentarios públicados y artículos guardados en favoritos. 
 - **Inicio de sesión**: Gestión de autenticación de usuarios.
 
 ### Backend
 
-El backend utiliza PHP para gestionar las operaciones principales:
+El backend utiliza PHP como API para gestionar la información de la base de datos:
 
-- Crear, editar y eliminar artículos.
+- Crear, editar, eliminar artículos y reviwes.
 - Gestionar usuarios y sus datos.
 
-La comunicación con el frontend se realiza mediante **fetch** y datos en formato JSON.
+La comunicación con el frontend se realiza mediante  `fetch` y datos en formato JSON.
 
 ### Base de datos
 
 La base de datos incluye las siguientes tablas:
 
-- **Articles**: Almacena la información de las publicaciones.
-- **Users**: Información de los usuarios registrados.
-- **Comments**: Comentarios relacionados con las publicaciones.
-- **Favorites**: Relación entre usuarios y sus artículos favoritos.
+- **USRS**: Contiene los datos de los usuarios, como nombre, correo, rol (`USER` o `ADMIN`), y estadísticas.
+
+- **ARTICLES**: Almacena los artículos creados por los usuarios, incluyendo título, contenido, imágenes, y autor.
+
+- **COMMENTS**: Gestiona los comentarios realizados por los usuarios, que pueden estar asociados a otros comentarios o artículos.
+
+- **FAVORITE**: Registra los artículos que los usuarios marcan como favoritos.
+
+- **REVIEWS**: Permite a los usuarios dejar reseñas y calificaciones sobre los artículos.
+
+> El resto de tablas sirven para relacionar dos de las anteriores tablas. 
 
 Este proyecto es un buen punto de partida para entender cómo combinar tecnologías y crear aplicaciones web funcionales.

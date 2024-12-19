@@ -7,7 +7,7 @@ services:
       - DB_HOST=database
       - DB_NAME=blog
       - DB_USER=blog
-      - DB_PASS=
+      - DB_PASS=securepass
     depends_on:
       - database
     networks:
@@ -26,7 +26,7 @@ services:
       MYSQL_ROOT_PASSWORD: 
       MYSQL_DATABASE: blog
       MYSQL_USER: blog
-      MYSQL_PASSWORD: 
+      MYSQL_PASSWORD: securepass
     ports:
       - "3307:3306"
     networks:
