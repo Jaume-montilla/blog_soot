@@ -20,10 +20,10 @@ services:
     networks:
       - blog_network
   
-  database:
+  db:
     image: mysql:5.7
     environment:
-      MYSQL_ROOT_PASSWORD: SuperDuperSecretPassword
+      MYSQL_ROOT_PASSWORD: 
       MYSQL_DATABASE: blog
       MYSQL_USER: blog
       MYSQL_PASSWORD: AlbedoScope123
@@ -33,6 +33,7 @@ services:
       - blog_network
     volumes:
       - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+      
 
 networks:
   blog_network:

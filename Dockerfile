@@ -1,8 +1,8 @@
-FROM node:20.17.0
-
-WORKDIR /var/www/html
+FROM node:22.11.0
 
 COPY . /var/www/html
+
+WORKDIR /var/www/html
 
 RUN npm install
 
