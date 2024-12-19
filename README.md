@@ -57,12 +57,7 @@ Si prefieres usar Docker para gestionar los contenedores, sigue estos pasos:
    git clone https://github.com/tu-usuario/blog.git
    cd blog
    ```
-2. Configura y levanta los servicios con Docker Compose para iniciar los contenedores de frontend, backend y base de datos.
-      ```bash
-      npm install
-      npm run dev
-   ```
-3. accede al fichero Docker-compose.yaml y modifica los valores  'MYSQL_ROOT_PASSWORD' por la contraseña de su MySQL.
+3. Accede al fichero Docker-compose.yaml y modifica los valores  'MYSQL_ROOT_PASSWORD' por la contraseña de su MySQL.
     
 4. Inicia los servicios.
       ```bash
