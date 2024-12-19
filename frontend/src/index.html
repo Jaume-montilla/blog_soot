@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="soot.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>SOOT Main</title>
+	<script src="script.js" defer></script>
+	<link rel="stylesheet" href="style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</head>
+<header>
+	<ul class="nav-bar">
+		<li class="logo-item">
+			<a href="/index.html"><img src="/img/s_transparent.svg" alt="Logo" class="nav-icon" /></a>
+		</li>
+		<div class="nav-elements nolog">
+			<li class="nav-link">
+				<a href="views/autenticador/index.html">Log in</a>
+			</li>
+			<li class="nav-link">
+				<a href="views/signUp/index.html">Sign up</a>
+			</li>
+		</div>
+		<div class="nav-elements log">
+			<li class="nav-link"><a href="views/user/index.html">Favorites</a></li>
+			<li class="nav-link"><a class="logOut">Log out</a></li>
+		</div>
+		<div class="nav-elements admin">
+			<li class="nav-link">
+				<a href="views/admin/adminView.html">Admin Page</a>
+			</li>
+			<li class="nav-link"><a href="views/user/index.html">Favorites</a></li>
+			<li class="nav-link"><a class="logOut">Log out</a></li>
+		</div>
+		<li class="search-item">
+			<input type="text" id="search" placeholder="Search" class="search-box" oninput="search()" />
+		</li>
+	</ul>
+</header>
+
+<body>
+	<div id="intro">
+		<img id="image_home_background" src="img/background_home.png" alt="imagen fondo de pantalla" />
+		<p class="txtIntro">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+			Nulla id nulla tincidunt, placerat metus sed, scelerisque sem.<br />
+			Maecenas placerat libero a libero mollis, sed pellentesque mi imperdiet.
+		</p>
+	</div>
+	<h2 id="art_introduction">ARTICLES</h2>
+	<div id="articles">
+		<br />
+		<table>
+			<tr id="articles_info"></tr>
+		</table>
+		<div id="style-flechas">
+			<img id="left_arrow" class="arrows" src="img/left_arrow.png" alt="left_arrow" style="width: 40px; height: 40px" />
+			<img id="right_arrow" src="img/right_arrow.png" alt="right_arrow" style="width: 38px; height: 38px" />
+		</div>
+	</div>
+	<div id="reviews">
+		<h2>Last Reviews</h2>
+		<table>
+			<tr>
+
+		</table>
+	</div>
+	<a class="twitter-timeline" href="https://twitter.com/ThePrimeagen?ref_src=twsrc%5Etfw">Tweets by ThePrimeagen</a>
+	<footer>
+		<div class="footer-container">
+			<div class="footer-section">
+				<h4>Sobre Nosotros</h4>
+				<p>
+					Somos una empresa dedicada al desarrollo de páginas web y soluciones
+					tecnológicas.
+				</p>
+			</div>
+			<div class="footer-section">
+				<h4>Enlaces Útiles</h4>
+				<ul>
+					<li><a href="#home">Inicio</a></li>
+					<li><a href="#about">Acerca</a></li>
+					<li><a href="#services">Servicios</a></li>
+					<li><a href="#contact">Contacto</a></li>
+				</ul>
+			</div>
+			<div class="footer-section">
+				<h4>Contáctanos</h4>
+				<p>Email: contacto@empresa.com</p>
+				<p>Teléfono: +34 123 456 789</p>
+				<p>Dirección: Calle Falsa 123, Madrid</p>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<p>&copy; 2024 SOOT | Todos los derechos reservados.</p>
+		</div>
+	</footer>
+</body>
+
+</html>

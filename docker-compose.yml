@@ -1,0 +1,39 @@
+services:
+  backend:
+    build: backend/src/
+    ports:
+      - "8080:80"
+    environment:
+      - DB_HOST=database
+      - DB_NAME=blog
+      - DB_USER=blog
+      - DB_PASS=
+    depends_on:
+      - database
+    networks:
+      - blog_network
+
+  frontend:
+    build: frontend/src/
+    ports:
+      - "5173:5173"
+    networks:
+      - blog_network
+  
+  database:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: 
+      MYSQL_DATABASE: blog
+      MYSQL_USER: blog
+      MYSQL_PASSWORD: 
+    ports:
+      - "3307:3306"
+    networks:
+      - blog_network
+    volumes:
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+networks:
+  blog_network:
+    driver: bridge

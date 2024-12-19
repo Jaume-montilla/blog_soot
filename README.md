@@ -1,43 +1,87 @@
-# Blog con JavaScript, PHP y MySQL
+# Blog SOOT
 
-Este proyecto es un **blog dinámico** creado utilizando **JavaScript** en el frontend y **PHP** en el backend, con una base de datos **MySQL** para almacenar los datos de las publicaciones. El objetivo de este proyecto es demostrar cómo integrar tecnologías de frontend y backend para crear una aplicación web funcional.
+Este proyecto es un blog dinámico que combina **JavaScript, PHP y MySQL** para ofrecer una experiencia completa. Diseñado para aprender y poner en práctica el desarrollo web, permite gestionar publicaciones, usuarios y comentarios de forma sencilla.
 
-## Tecnologías utilizadas
+## Tecnologías y versiones
 
-- **Frontend**: JavaScript, HTML, CSS
-- **Backend**: PHP
-- **Base de datos**: MySQL
+- **Frontend**: JavaScript (ES2024), HTML5, CSS3.
+- **Backend**: PHP (8.3).
+- **Base de datos**: MySQL (8.0.39).
+- **Node.js**:  20.17.0 para el entorno frontend.
+- **Contenedores**: Docker.
 
-## Características
+## Funcionalidades Principales
 
-- Creación, lectura, actualización y eliminación de publicaciones (CRUD).
-- Sistema de autenticación de usuarios.
-- Interfaz de usuario sencilla y funcional.
-- Base de datos relacional para almacenar publicaciones y usuarios.
+- **Autenticación de usuarios**: Registro e inicio de sesión.
+- **Gestión de publicaciones**: Crear, editar y eliminar artículos.
+- **Intefaz simple**: Diseño simple y funcional.
 
 ## Instalación
 
-### Requisitos
+### Pasos de instalación manual
 
-- MySQL o MariaDB para la base de datos.
-- PHP.
+1. Clona el repositorio en tu máquina:
+     ```bash
+   git clone https://github.com/tu-usuario/blog.git
+   cd blog
+   ```
+2. Configura el frontend:
+   ```bash
+      npm install
+      npm run dev
+   ```
+3. Configura el backend:
+   ```bash
+     cd backend
+     php -S localhost:8080
+   ```
+4. Carga la base de datos:
+   ```bash
+     mysql -u tu_usuario -p nombre_base < init.sql
+   ```
+### Instalación con Docker
 
-### Pasos para instalar
-
-1. **Clona el repositorio**:
-
+1. Clona el repositorio:
    ```bash
    git clone https://github.com/tu-usuario/blog.git
    cd blog
-   npm install
-   npm run dev
-   cd backend
-   php -s localhost:8080
    ```
-   ### DB
-   Para importar la base de datos usa el siguiente commando cambiando su usuario
+2. Configura el archivo docker-compose.yaml ajustando MYSQL_ROOT_PASSWORD.
+    
+3. Construye e inicia los servicios:
       ```bash
-     mysql -u tu_usuario -p nombre_base_de_datos < sql/blog_backup.sql
-     ```
+     docker-compose up --build
 
-   
+   ```
+4. Para detener los servicios:
+    ```bash
+   docker-compose down
+   ```
+## Organización del proyecto
+
+### Frontend
+El frontend está estructurado para gestionar las distintas vistas de manera ordenada:
+
+- **Administrador**: Funciones relacionadas con usuarios y publicaciones.
+- **Artículos**: Secciones para listar y detallar los posts.
+- **Inicio de sesión**: Gestión de autenticación de usuarios.
+
+### Backend
+
+El backend utiliza PHP para gestionar las operaciones principales:
+
+- Crear, editar y eliminar artículos.
+- Gestionar usuarios y sus datos.
+
+La comunicación con el frontend se realiza mediante **fetch** y datos en formato JSON.
+
+### Base de datos
+
+La base de datos incluye las siguientes tablas:
+
+- **Articles**: Almacena la información de las publicaciones.
+- **Users**: Información de los usuarios registrados.
+- **Comments**: Comentarios relacionados con las publicaciones.
+- **Favorites**: Relación entre usuarios y sus artículos favoritos.
+
+Este proyecto es un buen punto de partida para entender cómo combinar tecnologías y crear aplicaciones web funcionales.

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Articulo completo</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="main.js" defer></script>
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</head>
+<header>
+	<ul class="nav-bar">
+		<li class="logo-item">
+			<a href="../../index.html"><img src="../../img/s_transparent.svg" alt="Logo" class="nav-icon" /></a>
+		</li>
+		<div class="nav-elements nolog">
+			<li class="nav-link"><a href="../autenticador/index.html">Log in</a></li>
+			<li class="nav-link"><a href="../signUp/index.html">Sign up</a></li>
+		</div>
+		<div class="nav-elements log">
+			<li class="nav-link"><a href="../user/index.html">Favorites</a></li>
+			<li class="nav-link"><a href="" class="logOut">Log out</a></li>
+		</div>
+		<div class="nav-elements admin">
+			<li class="nav-link"><a href="../admin/adminView.html">Admin Page</a></li>
+			<li class="nav-link"><a href="../user/index.html">Favorites</a></li>
+			<li class="nav-link"><a href="" class="logOut">Log out</a></li>
+		</div>
+	</ul>
+	<br />
+</header>
+
+<body>
+	<div id="generalDiv">
+		<section class="sectHeader">
+			<p id="data"></p>
+			<h1 id="title"></h1>
+			<div class="div2">
+				<div class="div3">
+				</div>
+				<div class="div4">
+					<button class="btn" id="addFav">
+						<svg class="icon" width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+							fill="currentColor">
+							<path
+								d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z">
+							</path>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</section>
+		<section>
+			<img id="imagen" src="" alt="imagen1" class="img" />
+		</section>
+		<section class="bodyArt" id="bodyArt"></section>
+
+		<div class="comments">
+			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" id="twitter"
+				data-show-count="false" data-url="http://localhost:5173/index.html">Tweet</a>
+
+			<h4>Leave a comment</h4>
+			<div class="rating">
+				<input value="5" name="rating" id="star5" type="radio" />
+				<label for="star5"></label>
+				<input value="4" name="rating" id="star4" type="radio" />
+				<label for="star4"></label>
+				<input value="3" name="rating" id="star3" type="radio" />
+				<label for="star3"></label>
+				<input value="2" name="rating" id="star2" type="radio" />
+				<label for="star2"></label>
+				<input value="1" name="rating" id="star1" type="radio" />
+				<label for="star1"></label>
+			</div>
+		</div>
+		<form id="commentUsers">
+			<textarea maxlength="300" placeholder="Escribe tu comentario..." id="textInput"></textarea>
+			<input type="hidden" value="3" name="userID" id="userID" />
+			<input type="hidden" value="3" name="articleID" id="articleID" />
+		</form>
+		<button id="btnSend">Enviar</button>
+	</div>
+	<div id="comments">
+		<p id="presentation">Comments:</p>
+	</div>
+	<footer>
+		<div class="footer-container">
+			<div class="footer-section">
+				<h4>Sobre Nosotros</h4>
+				<p>
+					Somos una empresa dedicada al desarrollo de páginas web y soluciones
+					tecnológicas.
+				</p>
+			</div>
+			<div class="footer-section">
+				<h4>Enlaces Útiles</h4>
+				<ul>
+					<li><a href="#home">Inicio</a></li>
+					<li><a href="#about">Acerca</a></li>
+					<li><a href="#services">Servicios</a></li>
+					<li><a href="#contact">Contacto</a></li>
+				</ul>
+			</div>
+			<div class="footer-section">
+				<h4>Contáctanos</h4>
+				<p>Email: contacto@empresa.com</p>
+				<p>Teléfono: +34 123 456 789</p>
+				<p>Dirección: Calle Falsa 123, Madrid</p>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<p>&copy; 2024 SOOT | Todos los derechos reservados.</p>
+		</div>
+	</footer>
+</body>
+
+</html>
