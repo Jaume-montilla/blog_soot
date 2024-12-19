@@ -92,5 +92,3 @@ La base de datos incluye las siguientes tablas:
 - **REVIEWS**: Permite a los usuarios dejar reseñas y calificaciones sobre los artículos.
 
 > El resto de tablas sirven para relacionar dos de las anteriores tablas. 
-
-Este proyecto es un buen punto de partida para entender cómo combinar tecnologías y crear aplicaciones web funcionales.
